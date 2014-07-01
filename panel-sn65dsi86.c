@@ -475,6 +475,7 @@ static int sn65dsi86_init_video_timings(struct omap_dss_device *dssdev)
 	dsi86_write_register(dssdev, 0x30, VSPW & 0xff);
 	dsi86_write_register(dssdev, 0x31, ((VSPW>>8) & 0x7f) | (VSP<<7));
 
+	dsi86_write_register(dssdev, 0x34, HBP);
 	dsi86_write_register(dssdev, 0x36, VBP);
 
 	dsi86_write_register(dssdev, 0x38, HFP);
